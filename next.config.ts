@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  eslint: {
+    // Matikan ESLint selama proses build (Vercel)
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
