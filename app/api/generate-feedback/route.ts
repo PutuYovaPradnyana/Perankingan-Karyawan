@@ -20,7 +20,9 @@ export async function POST(request: Request) {
     console.log(`[SERVER DEBUG] API Key Awal: ${GEMINI_API_KEY.substring(0, 5)}...`); 
 
     // Inisialisasi GoogleGenAI
-    const genAI = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+      const genAI = new GoogleGenAI({
+    apiKey: GEMINI_API_KEY,
+  });
     
     const { employees } = await request.json();
 
